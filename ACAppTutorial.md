@@ -27,13 +27,16 @@ Each of these contains at least one subfolder of interest:
 `log.txt` is where AC logs everything about the execution of AC itself. Sometime this will contain relevant information about your application that AC logs automatically.  
 `py_log.txt` is where AC places strings explicitly requested to be logged by running applications.  
 
+### Python Version
+Currently (AC 0.22) the Python version used is **3.3.0**
+
 ### Basic workflow
 
 The workflow of testing an application isn't the best. It can be slow going when you're making a lot of changes, especially if you make syntax or logical mistakes. Try to be careful and ensure the code you're attempting to run is correct. You might want to look into something like pylint so you can find errors in the code without having to run Assetto Corsa.
 
 If something is wrong with your code, and error message might show up automatically in the in-game console or in `py_log.txt`. It will always show up in `log.txt`. The best way to find an error in `log.txt` is by search for your application name, in this case `appName`, and reading the surrounding output.
 
-I call an on-track event a session. I usually test in practise mode around a short track like silverstone-international, but it shouldn't matter what you choose.
+I call an on-track event a session. I usually test in practise mode around a short track like silverstone-international, but it shouldn't matter what you choose. For easy task switching, you may disable the Fullscreen Rendering in Options-Video. 
 
 Here is how I test my application:
 
@@ -72,7 +75,9 @@ The code for your application will go in place of the ellipses. For now, we'll i
 
 Actually, the bare minimum is probably just the return statement, but that application is not at all interesting.
 
-If you run Assetto Corsa and start a session, you will find in the application sidebar an entry named `appName`. If you activate this, you will see a very basic widget consisting of a 200x200 application window with the name `appName` at the top. Here is what you should see in the application sidebar:
+After creation of the App, you need to enable it. This can be done within the *Options-General* menu. The app will only be available in the widget bar, if it has been enabled here.
+
+If you run Assetto Corsa and start a session, you will find in the application sidebar an entry named `appName`. The applications in the widget bar are ordered alphabetically, with the builtin apps in above the third party apps. If you activate this, you will see a very basic widget consisting of a 200x200 application window with the name `appName` at the top. Here is what you should see in the application sidebar:
 
 ![image](https://raw.github.com/ckendell/ACAppTutorial/master/images/sidebar.png?raw=true)
 	
