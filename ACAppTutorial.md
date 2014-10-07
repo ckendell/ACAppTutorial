@@ -206,7 +206,7 @@ The Python API gives us access to some nice stuff, but there is a lot more than 
 * Add into this directory `_ctypes.pyd` and `sim_info.py`.  
 See [Shared memory for Python applications (sim_info.py) for AC v0.22](http://www.assettocorsa.net/forum/index.php?threads/shared-memory-for-python-applications-sim_info-py-for-ac-v0-22.11382/) for where to obtain these files.
 * Insert the `third_party` directory into the python environment before using the import statement:  
-  `sys.path.insert(len(sys.path), 'apps/python/appname/third_party')`.
+  `sys.path.append(0, 'apps/python/appname/third_party')`.
 * Import from `sim_info.py` using `from sim_info import info`.
 
 After doing so, you can get to any of the shared memory information using e.g. `info.physics.fuel`.
